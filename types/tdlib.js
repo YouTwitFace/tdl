@@ -2,6 +2,8 @@
 
 // TDLib 1.3.0
 
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+
 /** An object of this type can be returned on every function call, in case of an error */
 export type error = {
   _: 'error',
